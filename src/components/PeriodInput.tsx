@@ -1,25 +1,27 @@
 import React from 'react';
-import { Input, Typography } from 'antd';
+import { Input } from 'antd';
+import { useDispatch } from 'react-redux';
+import { setMonths } from '../features/profit/profitSlice';
 import style from '../style/InputStyle.module.scss';
 
-const { Title } = Typography;
-
 interface PeriodInputProps {
-    value: number;
-    onChange: (value: number) => void;
+  value: number;
 }
 
-const PeriodInput: React.FC<PeriodInputProps> = ({ value, onChange }) => (
+const PeriodInput: React.FC<PeriodInputProps> = ({ value }) => {
+  const dispatch = useDispatch();
+
+  return (
     <div>
-        <Title level={5}>Період (місяців)</Title>
-        <Input
-            type="number"
-            className={style.input__color}
-            placeholder="Період (місяців)"
-            value={value}
-            onChange={(e) => onChange(Number(e.target.value))}
-        />
+      <h5>Період (місяців)</h5>
+      <Input
+        type="number"
+        className={style.input__color}
+        value={value}
+        onChange={(e) => dispatch(setMonths(Number(e.target.value)))}
+      />
     </div>
-);
+  );
+};
 
 export default PeriodInput;
