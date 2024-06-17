@@ -1,0 +1,19 @@
+.tronix__icon {
+    height: 30vh;
+    animation: spin 5s linear infinite;
+    transition: animation 1s;
+    cursor: pointer;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.tronix__icon--fast {
+    animation: spin 0.8s linear infinite;
+}

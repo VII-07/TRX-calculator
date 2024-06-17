@@ -1,0 +1,45 @@
+@import 'color.scss';
+
+.content{
+    padding: 2rem;
+    background-color: rgb(7, 7, 15);
+    h5, span{
+        color: white;
+        font-weight: 600;
+        font-size: 16px;
+    }
+}
+.result__container{
+    padding: 2rem;
+    background-color: $greyBgInput;
+    border-radius: 10px;
+    width: 100%;
+    font-weight: 400;
+    color: white;
+    font-size: 14px;
+    span {
+        color: green;
+    }
+    h5{
+        font-weight: 900;
+    }
+
+}
+.center__content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.result__btn{
+    background-color: white;
+    border-radius: 10px;
+    transition: all 0.3s;
+    span{
+        color: black;
+        font-weight: 500;
+        font-size: 14px;
+    }
+    &:hover{
+        border-color: $purpleTronColor !important;
+    }
+}
